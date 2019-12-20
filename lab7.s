@@ -72,10 +72,10 @@ __Vectors	DCD		INITIAL_MSP			; stack pointer value when stack is empty
         	DCD		Reset_Handler		; reset vector
 			
             AREA    MYCODE, CODE, READONLY
-			EXPORT	Reset_Handler
-			ENTRY
+	    EXPORT	Reset_Handler
+	    ENTRY
 
-Reset_Handler		PROC
+Reset_Handler PROC
 
 		BL GPIO_ClockInit
 		BL GPIO_init
@@ -210,7 +210,7 @@ GPIO_init  PROC
 	ldr r1,=0x44433334
 	str r1,[r0]
 
-    BX LR
+    	BX LR
 	ENDP
 		
 
