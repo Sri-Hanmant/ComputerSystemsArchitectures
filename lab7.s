@@ -198,6 +198,7 @@ GPIO_ClockInit PROC
 	
 ;This routine enables the GPIO for the LED's.  By default the I/O lines are input so we only need to configure for ouptut.
 	ALIGN
+	
 GPIO_init  PROC
 	
 ; ENEL 384 board LEDs: D1 - PA9, D2 - PA10, D3 - PA11, D4 - PA12
@@ -213,9 +214,5 @@ GPIO_init  PROC
     	BX LR
 	ENDP
 		
-
-
-
-
 	ALIGN
 	END
